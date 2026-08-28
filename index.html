@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- help sload lang , symbols , emojies-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive design . Like if had to be opened in a phone-->
+  <title>Bāng Wǒ</title> <!-- Bang wo means help me in chinese . My app is to help me :smile-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">  <!-- Fonts for the chinese text as I wanna name the app in chinese -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- linking the css file -->
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar"> <!-- We use aside for the secondary content-->
+      <div class="logo">  <!-- This is the logo container . We are gonna seperate the logo as its not needed to be read only a design feature -->
+        <div class="seal" aria-hidden="true">帮</div>  <!-- area-hidden is what makes it not readable by screen readers -->
+        <span class="logo-name">Bāng Wǒ</span>
+      </div>
+
+      <nav class="nav"> <!-- These are navigations for the sidebars . href is empty for now as well I am still working on part 1-->
+        <a href="#" class="nav-item active" data-section="tasks">
+          <span class="nav-icon">✓</span>  <!-- This is the active one for now . Every class here has nav-item only this is active so it is gonna be highlied for now -->
+          <span>Tasks</span>
+        </a>
+        <a href="#" class="nav-item" data-section="duedates">
+          <span class="nav-icon">◔</span>
+          <span>Due dates</span>
+        </a>
+        <a href="#" class="nav-item" data-section="notes">
+          <span class="nav-icon">✎</span>
+          <span>Notes</span>
+        </a>
+        <a href="#" class="nav-item" data-section="upload">
+          <span class="nav-icon">⇧</span>
+          <span>Upload</span>
+        </a>
+        <a href="#" class="nav-item" data-section="highlights">
+          <span class="nav-icon">✦</span>
+          <span>Highlights</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="main"> <!-- Wrap everything on the right of the sidebar-->
+
+      <header class="topbar">
+        <div class="topbar-right">
+          <button class="icon-btn" id="settingsBtn" aria-label="Settings">⚙</button>
+          <button class="text-btn" id="logoutBtn">Log out</button>
+          <button class="primary-btn" id="signupBtn">Sign up</button>
+        </div>
+      </header>
+
+      <main class="hero">
+        <p class="hero-eyebrow">Quote of the day</p>
+        <blockquote class="hero-quote" id="quoteText">
+          The secret of getting ahead is getting started.
+        </blockquote>
+        <p class="hero-author" id="quoteAuthor">— Mark Twain</p>
+        <div class="brush-stroke" aria-hidden="true"></div>
+      </main>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
