@@ -7,16 +7,18 @@
   --seal: #AE3B2E;
   --seal-dark: #8A2E24;
   --gold: #C99A3E;
-  --border: rgba(33, 40, 31, 0.12);
+  --border: rgba(11, 10, 14, 0.12);
 
   --font-display: 'Noto Serif SC', serif;
   --font-body: 'Inter', sans-serif;
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; } /* Universal selector total width = width + padding + border 
+This guy applies it to all element total width = width(padding and border are squeezed in here
+*/
 
 html, body {
-  margin: 0;
+  margin: 0; /* Remove default margin */
   padding: 0;
   background: var(--paper);
   color: var(--ink);
@@ -30,7 +32,7 @@ html, body {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
+  width: 240px;
   flex-shrink: 0;
   background: var(--paper-raised);
   border-right: 1px solid var(--border);
@@ -104,7 +106,7 @@ html, body {
 
 .nav-item.active {
   background: rgba(174, 59, 46, 0.08);
-  color: var(--seal-dark);
+  color: var(--gold);
 }
 
 .nav-item.active::before {
@@ -228,11 +230,11 @@ html, body {
 
 .brush-stroke {
   width: 0;
-  height: 6px;
+  height: 5px;
   margin-top: 0.5rem;
-  background: var(--gold);
+  background: var(--seal-dark);
   border-radius: 3px;
-  opacity: 0.6;
+  opacity: 0.5;
   animation: drawStroke 0.5s ease 0.6s forwards;
 }
 
